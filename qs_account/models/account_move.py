@@ -1,7 +1,9 @@
 #-*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+
 from datetime import date, datetime, time
+
 
 class AccountMove(models.Model):
     _inherit = 'account.move'
@@ -43,6 +45,7 @@ class AccountMove(models.Model):
                 # rec.about_payment = ', '.join(val.get('ref', '') for val in json_values)
                 if rec._get_reconciled_info_JSON_values()[0]['payment_id']:
                     rec.about_payment = self.env['account.payment'].search([('id', '=', rec._get_reconciled_info_JSON_values()[0]['account_payment_id'])]).ref
+
 
 
 

@@ -76,6 +76,7 @@
         </field>
     </record>
 
+
     <record id="view_order_form_inherited_in" model="ir.ui.view">
         <field name="name">account.move.inherited.in</field>
         <field name="model">account.move</field>
@@ -90,5 +91,6 @@
 
         </field>
     </record>
+
 
 </odoo>

@@ -64,6 +64,7 @@ class AccountFollowupReport(models.AbstractModel):
         for currency, aml_recs in res.items():
             total = 0
             total_issued = 0
+            columns = []
             for aml in aml_recs:
                 if not aml.blocked:
                     amount = aml.amount_residual_currency if aml.currency_id else aml.amount_residual
